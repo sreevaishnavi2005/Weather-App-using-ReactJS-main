@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('C:/Users/sree/Desktop/Weather app/Weather-App-using-ReactJS-main/bg.jpg'); /* Add your background image here */
+    background-size: contain; /* Maintain original aspect ratio without zooming in */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.city input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.city button {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.city button:hover {
+    background: #0277bd;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.forecast-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: calc(33.333% - 1rem);
+    box-sizing: border-box;
+}
+
+.forecast-item:hover {
+    transform: scale(1.05);
+}
+
+.weather-image img {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-temp h2,
+.weather-temp p,
+.weather-date p,
+.weather-stats h3 {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.weather-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.weather-stats div {
+    width: 45%;
+}
+
+.weather-stats h3 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .forecast-item {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-item {
+        width: 100%;
+    }
+
+    .weather-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-stats div {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
